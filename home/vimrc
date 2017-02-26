@@ -1,0 +1,140 @@
+set nocompatible              " be iMproved, required
+let mapleader = "\<Space>"
+
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'sjl/gundo.vim'
+
+Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'mileszs/ack.vim'
+
+Plugin 'scrooloose/nerdtree'
+
+Plugin 'vim-syntastic/syntastic'
+
+Plugin 'moll/vim-bbye'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+set encoding=utf-8
+set modelines=3
+set autoindent
+set showmode
+set showcmd
+set visualbell
+set ttyfast
+set ruler
+set backspace=indent,eol,start
+set norelativenumber
+set laststatus=2
+set history=1000
+set undofile
+set undoreload=10000
+set list
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set lazyredraw
+set matchtime=3
+set showbreak=↪
+set splitbelow
+set splitright
+set autowrite
+set autoread
+set shiftround
+set title
+set linebreak
+set colorcolumn=+1
+
+set tabstop=4       " number of visual spaces per TAB
+set softtabstop=4   " number of spaces in tab when editing
+set expandtab       " tabs are spaced
+
+set number          " show line numbers
+
+set cursorline      " highlight current line
+
+filetype indent on  " load filetype-specific indent files
+
+set wildmenu        " visual autocomplete for command menu
+
+set showmatch       " highlight matching [{()}]
+
+" Search Settings
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matches
+nnoremap <leader><space> :nohlsearch<CR>
+
+set hidden          " leave hidden buffers open
+
+set mouse=a         " enable mouse use in all modes
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+"""""""""""""""""""
+" leader key combos
+nnoremap <leader>u :GundoToggle<CR>
+" quit a buffer
+" nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+nnoremap <Leader>q :Bdelete<CR>
+" open a new buffer in the current window
+nnoremap <Leader>n :enew<CR>
+
+" airline configuration
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+" gundo configuration
+let g:gundo_prefer_python3 = 1
+
+" ack.vim configuration
+if executable('ag')
+    let g:ackprg = 'ag -U --vimgrep'
+endif
+nnoremap <Leader>F :Ack!<Space>
+
+
+" ctrlp configuration
+let g:ctrlp_user_command = 'ag -l -U --nocolor -g "" %s'
+nnoremap <silent><C-t> :CtrlPBuffer <CR>
+
+" nerdtree configuration
+let NERDTreeIgnore = ['\.pyc$']
+
+" syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+colorscheme molokai
+syntax enable
+

@@ -1,0 +1,6 @@
+[ -f ~/.path ] && source ~/.path
+[ -f ~/.exports ] && source ~/.exports
+
+# Not version controlled for machine specific
+# configuration.
+[ -f ~/.profile_extra ] && source ~/.profile_extra

@@ -1,0 +1,2 @@
+#!/bin/bash
+tmux new -c $(pwd) -s $1

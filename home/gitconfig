@@ -1,0 +1,18 @@
+[user]
+	name = Steven MacLeod
+	email = steven@smacleod.ca
+[core]
+	excludesfile = ~/.gitignore_global
+[merge]
+	tool = meld
+[color]
+	ui = true
+[alias]
+    l = log --oneline --graph --color --decorate
+    lb = log --oneline --graph --color --decorate --simplify-by-decoration
+[push]
+	default = simple
+[include]
+	# Not version controlled for
+	# machine specific configuration.
+    path = .gitconfig_extra

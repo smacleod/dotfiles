@@ -1,2 +1,2 @@
-alias gdiff='git diff --no-index --'
+alias gdiff='git diff --no-index'
 

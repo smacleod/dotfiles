@@ -1,3 +1,6 @@
+# enable completion for pyinvoke
+[ -f ~/src/invoke/completion/bash ] && source ~/src/invoke/completion/bash
+
 # enable completion for ssh
 _complete_ssh_hosts ()
 {

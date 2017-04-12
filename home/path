@@ -1,2 +1,3 @@
+[ -d "$HOME/src/phabricator-utils/arcanist/bin" ] && PATH="$HOME/src/phabricator-utils/arcanist/bin:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"

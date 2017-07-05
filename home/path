@@ -1,4 +1,5 @@
 [ -d "$HOME/src/phabricator-utils/arcanist/bin" ] && PATH="$HOME/src/phabricator-utils/arcanist/bin:$PATH"
 [ -d "$HOME/.cargo/bin" ] && PATH="$HOME/.cargo/bin:$PATH"
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
+[ -d "$HOME/Library/Python/2.7/bin" ] && PATH="$HOME/Library/Python/2.7/bin:$PATH"
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"

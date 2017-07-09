@@ -3,3 +3,4 @@
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/Library/Python/2.7/bin" ] && PATH="$HOME/Library/Python/2.7/bin:$PATH"
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+[ -f "$HOME/bin/google-cloud-sdk/path.bash.inc" ] && source "$HOME/bin/google-cloud-sdk/path.bash.inc"

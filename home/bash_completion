@@ -1,5 +1,9 @@
 # enable completion for pyinvoke
 [ -f ~/src/invoke/completion/bash ] && source ~/src/invoke/completion/bash
+# The next line enables shell command completion for gcloud.
+[ -f ~/bin/google-cloud-sdk/completion.bash.inc ] && source ~/bin/google-cloud-sdk/completion.bash.inc
+
+
 
 # enable completion for ssh
 _complete_ssh_hosts ()

@@ -1,19 +1,21 @@
 [user]
-	name = Steven MacLeod
-	email = steven@smacleod.ca
+  name = Steven MacLeod
+  email = steven@smacleod.ca
 [core]
-	excludesfile = ~/.gitignore_global
-	editor = vim
+  excludesfile = ~/.gitignore_global
+  editor = vim
 [merge]
-	tool = meld
+  tool = meld
 [color]
-	ui = true
+  ui = true
 [alias]
-    l = log --oneline --graph --color --decorate
-    lb = log --oneline --graph --color --decorate --simplify-by-decoration
+  l = log --oneline --graph --color --decorate
+  la = log --oneline --graph --color --decorate --all
+  lb = log --oneline --graph --color --decorate --simplify-by-decoration
+  lba = log --oneline --graph --color --decorate --simplify-by-decoration --all
 [push]
-	default = simple
+  default = simple
 [include]
-	# Not version controlled for
-	# machine specific configuration.
-    path = .gitconfig_extra
+  # Not version controlled for
+  # machine specific configuration.
+  path = .gitconfig_extra

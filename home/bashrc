@@ -30,7 +30,10 @@ shopt -s "autocd" 2> /dev/null;
 
 
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
+
+[ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f ~/.bash_completion ] && source ~/.bash_completion
+
 [ -f ~/.bash_prompt ] && source ~/.bash_prompt
 
 # Not version controlled for machine specific

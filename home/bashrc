@@ -1,3 +1,7 @@
+# System defaults
+[ -f /etc/bashrc ] && source /etc/bashrc
+[ -f /etc/profile ] && source /etc/profile
+
 [ -f ~/.profile ] && source ~/.profile
 [ -f ~/.bash_functions ] && source ~/.bash_functions
 
@@ -30,10 +34,7 @@ shopt -s "autocd" 2> /dev/null;
 
 
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
-
-[ -f /usr/share/bash-completion/bash_completion ] && source /usr/share/bash-completion/bash_completion
 [ -f ~/.bash_completion ] && source ~/.bash_completion
-
 [ -f ~/.bash_prompt ] && source ~/.bash_prompt
 
 # Not version controlled for machine specific

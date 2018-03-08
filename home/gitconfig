@@ -19,3 +19,5 @@
   # Not version controlled for
   # machine specific configuration.
   path = .gitconfig_extra
+[cinnabar]
+  helper = ~/src/git-cinnabar/git-cinnabar-helper

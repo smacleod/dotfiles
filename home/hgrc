@@ -24,6 +24,7 @@ transplant =
 record =
 shelve =
 fsmonitor =
+evolve =
 
 [pager]
 pager = LESS='FrX' less

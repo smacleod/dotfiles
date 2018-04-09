@@ -10,6 +10,7 @@
   ui = true
 [alias]
   l = log --oneline --graph --color --decorate
+  ls = log --oneline --graph --color --decorate --all -n 30
   la = log --oneline --graph --color --decorate --all
   lb = log --oneline --graph --color --decorate --simplify-by-decoration
   lba = log --oneline --graph --color --decorate --simplify-by-decoration --all

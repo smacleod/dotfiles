@@ -16,3 +16,6 @@
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# vscode project files
+.vscode

@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "window.zoomLevel": 1,
+    "editor.renderWhitespace": "boundary",
+    "[python]": {},
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.dragAndDrop": false,
+    "editor.minimap.renderCharacters": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderControlCharacters": true,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.startupEditor": "none",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.useExperimentalFileWatcher": true,
+    "zenMode.fullScreen": false,
+    "explorer.openEditors.visible": 10,
+    "search.smartCase": true
+}

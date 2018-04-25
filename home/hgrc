@@ -3,6 +3,7 @@ username = Steven MacLeod <steven@smacleod.ca>
 editor = vim
 merge = internal:merge3
 interface = curses
+ignore = ~/.hgignore_global
 
 [mozilla]
 ircnick = smacleod

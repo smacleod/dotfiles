@@ -1,0 +1,23 @@
+syntax: glob
+
+# Compiled Python Files
+*.pyc
+
+# python egg directories
+*.egg-info
+
+# temp files
+*.*~
+
+# macOS
+*.DS_Store
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# vscode project files
+.vscode

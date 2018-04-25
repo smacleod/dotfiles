@@ -19,6 +19,7 @@
     ~/.gitconfig: home/gitconfig
     ~/.gitignore_global: home/gitignore_global
     ~/.hgrc: home/hgrc
+    ~/.hgignore_global: home/hgignore_global
     ~/.path: home/path
     ~/.profile: home/profile
     ~/.tmux.conf: home/tmux.conf

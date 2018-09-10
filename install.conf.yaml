@@ -38,6 +38,7 @@
     ~/bin/tma: home/bin/tma
     ~/bin/tml: home/bin/tml
     ~/bin/tmn: home/bin/tmn
+    ~/bin/moz-conduit-versions: home/bin/moz-conduit-versions
 
 # vim color files.
 - link:

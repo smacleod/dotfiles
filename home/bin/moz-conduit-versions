@@ -1,0 +1,7 @@
+#!/bin/bash
+echo '[DEV ] Lando UI:   ' `curl -s https://lando.services.mozilla.com/__version__ | jq '.version'`
+echo '[PROD] Lando UI:   ' `curl -s https://lando.devsvcdev.mozaws.net/__version__ | jq '.version'`
+echo '[DEV ] Lando API:  ' `curl -s https://api.lando.devsvcdev.mozaws.net/__version__ | jq '.version'`
+echo '[PROD] Lando API:  ' `curl -s https://api.lando.services.mozilla.com/__version__ | jq '.version'`
+echo '[DEV ] Phabricator:' `curl -s https://phabricator-dev.allizom.org/__version__ | jq '.version'`
+echo '[PROD] Phabricator:' `curl -s https://phabricator.services.mozilla.com/__version__ | jq '.version'`

@@ -1,2 +1,1 @@
-alias gdiff='git diff --no-index'
-alias gtile-reload='gnome-shell-extension-tool -r gTile@vibou'
+[ -f "$HOME/.aliases" ] && source ~/.aliases

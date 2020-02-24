@@ -1,0 +1,2 @@
+[ -f "$HOME/.profile" ] && source ~/.profile
+export PATH="$HOME/.cargo/bin:$PATH"

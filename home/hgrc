@@ -4,6 +4,7 @@ editor = vim
 merge = internal:merge3
 interface = curses
 ignore = ~/.hgignore_global
+tweakdefaults = true
 
 [mozilla]
 ircnick = smacleod
@@ -14,35 +15,36 @@ showfunc = 1
 unified = 8
 
 [extensions]
-color =
-histedit =
-purge =
-pager =
-progress =
-rebase =
-share =
-transplant =
-record =
-shelve =
-fsmonitor =
-evolve =
+histedit = 
+purge = 
+progress = 
+rebase = 
+share = 
+transplant = 
+record = 
+shelve = 
+fsmonitor = 
+evolve = 
+absorb = 
+blackbox = 
+firefoxtree = /Users/smacleod/.mozbuild/version-control-tools/hgext/firefoxtree
+clang-format = /Users/smacleod/.mozbuild/version-control-tools/hgext/clang-format
+js-format = /Users/smacleod/.mozbuild/version-control-tools/hgext/js-format
+push-to-try = /Users/smacleod/.mozbuild/version-control-tools/hgext/push-to-try
 
 [pager]
 pager = LESS='FrX' less
 quiet = True
-attend = annotate, cat, diff, export, glog, log, qdiff, help, heads, incoming, outgoing, dheads, dlog, wip, glog, flog, tags
 
 [templates]
-wip = '{label("log.branch", branches)} {label("changeset.{phase}", rev)} {label("grep.user", author|user)}{label("log.tag", if(tags," {tags}"))} {label("log.bookmark", if(bookmarks," {bookmarks}"))}\n\t{label(ifcontains(rev, revset('.'), 'desc.here'),desc|firstline)}'
+wip = '{label("wip.branch", if(branches,"{branches} "))}{label(ifeq(graphnode,"x","wip.obsolete","wip.{phase}"),"{rev}:{node|short}")}{label("wip.user", " {author|user}")}{label("wip.tags", if(tags," {tags}"))}{label("wip.tags", if(fxheads," {fxheads}"))}{if(bookmarks," ")}{label("wip.bookmarks", if(bookmarks,bookmarks))}{label(ifcontains(rev, revset("parents()"), "wip.here"), " {desc|firstline}")}'
 
 [revsetalias]
 close_bookmarks($1) = ancestors(parents($1)) and bookmark()
-
-wip = (parents(not public()) or not public() or . or head()) and (not obsolete() or orphan()^) and not closed()
 # Custom wip revset overriding the global to only show things on the
 # default branch. Firefox repos have a bunch of branches laying around
 # which clutter up the view and make things slow.
-wip = (branch(default) & (parents(not public()) or not public() or . or head())) and (not obsolete() or orphan()^) and not closed()
+wip = (parents(not public()) or not public() or . or (head() and branch(default))) and (not obsolete() or orphan()^) and not closed() and not (fxheads() - date(-90))
 
 # Local work that's in progress
 # which will also show how orphan changesets are related.
@@ -50,6 +52,7 @@ olddlog = (ancestors(.) & draft()) or (descendants(.) & draft()) or parents(ance
 localdrafts($1) = (ancestors($1) & draft()) or (descendants(children($1) & draft()) & draft())
 localwip($1) = localdrafts($1) or parents(first(ancestors($1) & draft()))
 localevolvewip($1) = localwip($1) or (orphan() & descendants(allsuccessors(allprecursors(localdrafts($1)))))
+ignored_changesets = desc("ignore-this-changeset") or extdata(get_ignored_changesets)
 
 [alias]
 dhe = histedit 'first(ancestors(.) & draft())'
@@ -62,28 +65,43 @@ glog = log -G
 flog = log -f
 wip = log --graph --rev=wip --template=wip
 booklog = log -r '($1 or (ancestors($1) and not (close_bookmarks($1) or ancestors(close_bookmarks($1))))) and draft()'
+smart-annotate = annotate -w --skip ignored_changesets
 
 [color]
-mode=terminfo
+mode = terminfo
 
 #Custom colours
-color.orange=202
-color.lightyellow=191
-color.darkorange=220
-color.brightyellow=226
+color.orange = 202
+color.lightyellow = 191
+color.darkorange = 220
+color.brightyellow = 226
 
 #Colours for each label
-log.branch=cyan
-log.summary=lightyellow
-log.description=lightyellow
-log.bookmark=green
-log.tag=darkorange
-log.graph=blue
+log.branch = cyan
+log.summary = lightyellow
+log.description = lightyellow
+log.bookmark = green
+log.tag = darkorange
+log.graph = blue
 
-changeset.public=orange bold
-changeset.secret=blue bold
-changeset.draft=green bold
+changeset.public = orange bold
+changeset.secret = blue bold
+changeset.draft = green bold
 
-desc.here=bold
+desc.here = bold
+wip.bookmarks = yellow underline
+wip.branch = yellow
+wip.draft = green
+wip.here = red
+wip.obsolete = none
+wip.public = blue
+wip.tags = yellow
+wip.user = magenta
+[rebase]
+experimental.inmemory = yes
+[experimental]
+graphshorten = true
+[extdata]
+get_ignored_changesets = shell:cat `hg root`/.hg-annotate-ignore-revs 2> /dev/null || true
 
 %include .hgrc_extra

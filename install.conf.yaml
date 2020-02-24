@@ -9,6 +9,7 @@
 
 # home configuration files:
 - link:
+    ~/.aliases: home/aliases
     ~/.bash_aliases: home/bash_aliases
     ~/.bash_completion: home/bash_completion
     ~/.bash_functions: home/bash_functions
@@ -24,6 +25,8 @@
     ~/.profile: home/profile
     ~/.tmux.conf: home/tmux.conf
     ~/.vimrc: home/vimrc
+    ~/.zprofile: home/zprofile
+    ~/.zshrc: home/zshrc
 
 # .config files:
 - link:
@@ -31,14 +34,16 @@
 
 # VSCode files:
 - link:
+    # Linux
     ~/.config/Code/User/settings.json: home/config/Code/User/settings.json
+    # Mac OS
+    ~/Library/Application Support/Code/User/settings.json: home/config/Code/User/Settings.json
 
 # bin executables:
 - link:
     ~/bin/tma: home/bin/tma
     ~/bin/tml: home/bin/tml
     ~/bin/tmn: home/bin/tmn
-    ~/bin/moz-conduit-versions: home/bin/moz-conduit-versions
 
 # vim color files.
 - link:

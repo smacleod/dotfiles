@@ -1,0 +1,10 @@
+// Place your key bindings in this file to override the defaults
+[
+    { "key": "shift+cmd+t", "command": "workbench.action.terminal.toggleTerminal" },
+    { "key": "ctrl+shift+]", "command": "workbench.action.terminal.focusNext" },
+    { "key": "ctrl+shift+[", "command": "workbench.action.terminal.focusPrevious" },
+    { "key": "shift+cmd+]", "command": "workbench.action.terminal.focusNext", "when": "terminalFocus" },
+    { "key": "shift+cmd+[", "command": "workbench.action.terminal.focusPrevious", "when": "terminalFocus" },
+    { "key": "shift+cmd+]", "command": "workbench.action.nextEditor", "when": "!terminalFocus" },
+    { "key": "shift+cmd+[", "command": "workbench.action.previousEditor", "when": "!terminalFocus" },
+]

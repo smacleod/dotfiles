@@ -28,8 +28,8 @@ evolve =
 absorb = 
 blackbox = 
 firefoxtree = /Users/smacleod/.mozbuild/version-control-tools/hgext/firefoxtree
-clang-format = /Users/smacleod/.mozbuild/version-control-tools/hgext/clang-format
-js-format = /Users/smacleod/.mozbuild/version-control-tools/hgext/js-format
+#clang-format = /Users/smacleod/.mozbuild/version-control-tools/hgext/clang-format
+#js-format = /Users/smacleod/.mozbuild/version-control-tools/hgext/js-format
 push-to-try = /Users/smacleod/.mozbuild/version-control-tools/hgext/push-to-try
 
 [pager]

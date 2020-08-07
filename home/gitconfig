@@ -3,7 +3,7 @@
   email = steven@smacleod.ca
 [core]
   excludesfile = ~/.gitignore_global
-  editor = vim
+  editor = code -w
 [merge]
   tool = meld
 [color]

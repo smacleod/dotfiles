@@ -1,6 +1,6 @@
 [ui]
 username = Steven MacLeod <steven@smacleod.ca>
-editor = vim
+editor = code -w
 merge = internal:merge3
 interface = curses
 ignore = ~/.hgignore_global

@@ -1,2 +1,5 @@
 alias gdiff='git diff --no-index'
 alias gtile-reload='gnome-shell-extension-tool -r gTile@vibou'
+alias ytdl='youtube-dl -ciw --no-mtime --hls-prefer-native'
+alias ytdl-mp4='youtube-dl -ciw --no-mtime --hls-prefer-native -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
+alias ytdl-4k='youtube-dl -ciw --no-mtime --hls-prefer-native -f "bestvideo[ext=mp4][height<=2160][width<=4096]+bestaudio[ext=m4a]/mp4"'

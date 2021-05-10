@@ -5,4 +5,3 @@
 # configuration.
 [ -f "$HOME/.profile_extra" ] && source ~/.profile_extra
 
-export PATH="$HOME/.cargo/bin:$PATH"

@@ -1,6 +1,6 @@
 {
     "workbench.colorTheme": "Monokai",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "editor.renderWhitespace": "boundary",
     "[python]": {},
     "editor.acceptSuggestionOnEnter": "off",
@@ -101,7 +101,44 @@
             "value": "#42b883"
         }
     ],
+    "files.exclude": {
+        "obj-*/": true
+    },
     "files.watcherExclude": {
-        "**/.hg/**": true
-    }
+        "**/obj-**/**": true,
+        "obj-*/": true,
+        ".hg/": true,
+        "**/.hg/": true,
+        "**/.hg/**": true,
+        ".git/": true,
+        "**/.git/": true,
+        "**/.git/**": true,
+    },
+    "files.associations": {
+        "*.jsm": "javascript",
+        "moz.build": "python"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.formatting.provider": "black",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.panel.defaultLocation": "right",
+    "cSpell.enabled": false,
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+    "terminal.integrated.scrollback": 10000,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "liveshare.authenticationProvider": "GitHub"
 }

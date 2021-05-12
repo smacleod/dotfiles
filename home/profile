@@ -4,4 +4,3 @@
 # Not version controlled for machine specific
 # configuration.
 [ -f "$HOME/.profile_extra" ] && source ~/.profile_extra
-

@@ -36,6 +36,7 @@
 - link:
     # Linux
     ~/.config/Code/User/settings.json: home/config/Code/User/settings.json
+    ~/.config/Code/User/keybindings.json: home/config/Code/User/keybindings.json
     # Mac OS
     ~/Library/Application Support/Code/User/settings.json: home/config/Code/User/Settings.json
     ~/Library/Application Support/Code/User/keybindings.json: home/Library/Application Support/Code/User/keybindings.json

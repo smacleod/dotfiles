@@ -8,5 +8,7 @@
 [ -d "/opt/homebrew/sbin" ] && PATH="/opt/homebrew/sbin:$PATH"
 [ -d "/opt/homebrew/share/man" ] && MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
 [ -d "/opt/homebrew/share/info" ] && INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
-[ -d "$HOME/.cargo/bin" ] && PATH="$HOME/.cargo/bin:$PATH"
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
 [ -d "$HOME/bin" ] && PATH="$HOME/bin:$PATH"
+
+[ -f "$HOME/.profile_extra" ] && source ~/.profile_extra

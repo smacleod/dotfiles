@@ -130,15 +130,19 @@
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml"
     },
-    "terminal.integrated.scrollback": 10000,
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "liveshare.authenticationProvider": "GitHub"
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "liveshare.authenticationProvider": "GitHub",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.localEchoLatencyThreshold": 0,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.showExitAlert": false,
+    "[rust]": {
+        "editor.defaultFormatter": "matklad.rust-analyzer"
+    },
+    "javascript.format.enable": false
 }

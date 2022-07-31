@@ -1,5 +1,10 @@
 alias gdiff='git diff --no-index'
 alias gtile-reload='gnome-shell-extension-tool -r gTile@vibou'
-alias ytdl='youtube-dl -ciw --no-mtime --hls-prefer-native'
-alias ytdl-mp4='youtube-dl -ciw --no-mtime --hls-prefer-native -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
-alias ytdl-4k='youtube-dl -ciw --no-mtime --hls-prefer-native -f "bestvideo[ext=mp4][height<=2160][width<=4096]+bestaudio[ext=m4a]/mp4"'
+alias ytdl='yt-dlp -ciw --no-mtime --hls-prefer-native --cookies ~/ytdl-cookies.txt'
+alias ytdl-mp4='yt-dlp -ciw --no-mtime --hls-prefer-native --cookies ~/ytdl-cookies.txt -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
+alias ytdl-1080='yt-dlp -ciw --no-mtime --hls-prefer-native --cookies ~/ytdl-cookies.txt -f "bestvideo[ext=mp4][height<=1080][width<=1920]+bestaudio[ext=m4a]/mp4"'
+alias ytdl-4k='yt-dlp -ciw --no-mtime --hls-prefer-native --cookies ~/ytdl-cookies.txt -f "bestvideo[ext=mp4][height<=2160][width<=4096]+bestaudio[ext=m4a]/mp4"'
+
+alias yt-aria-mp4='yt-dlp -ciw --external-downloader aria2c --external-downloader-args "-j 8 -s 8 -x 8 -k 5M" --no-mtime --hls-prefer-native --cookies ~/ytdl-cookies.txt -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"'
+
+alias shazam='songrec audio-file-to-recognized-song'

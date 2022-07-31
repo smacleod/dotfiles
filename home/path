@@ -6,3 +6,7 @@
 [ -d "$HOME/src/git-cinnabar" ] && PATH="$HOME/src/git-cinnabar:$PATH"
 [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ] && PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 [ -f "$HOME/bin/google-cloud-sdk/path.bash.inc" ] && source "$HOME/bin/google-cloud-sdk/path.bash.inc"
+[ -d "/opt/homebrew/bin" ] && PATH="/opt/homebrew/bin:$PATH"
+[ -d "/opt/homebrew/sbin" ] && PATH="/opt/homebrew/sbin:$PATH"
+[ -d "/opt/homebrew/share/man" ] && MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
+[ -d "/opt/homebrew/share/info" ] && INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
